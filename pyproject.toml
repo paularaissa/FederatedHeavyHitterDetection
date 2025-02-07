@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hh_fl"
+version = "1.0.0"
+description = ""
+license = "Apache-2.0"
+dependencies = [
+    "flwr[simulation]>=1.15.0",
+    "flwr-datasets[vision]>=0.5.0",
+    "scikit-learn>=1.6.1",
+    "river>=0.22.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "paula"
+
+[tool.flwr.app.components]
+serverapp = "hh_fl.server_app:app"
+clientapp = "hh_fl.client_app:app"
+
+[tool.flwr.app.config]
+# Server App
+num-server-rounds = 3
+penalty = "l2"
+local-epochs = 1
+main-src = "/Users/paularaissasilva/Documents/flower_project/river/hh_fl/"
+data-set-partitioned-src = "data_june_1000/"
+# Client App
+top-n = 30
+fading-factor = 1
+epsilon = 0.001
+support =  0.0005
+num-supernodes = 2
+#"support": 0.00025, # 4 nodes
+#"support": 0.000125, # 8 nodes
+
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.federations.local-simulation]
+options.num-supernodes = 2
+
+# ClientApp
+params.objective = "binary:logistic"
+params.eta = 0.1 # Learning rate
+params.max-depth = 8
