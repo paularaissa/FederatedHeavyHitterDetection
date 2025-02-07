@@ -17,4 +17,4 @@ flwr run .
 Refer to the [How to Run Simulations](https://flower.ai/docs/framework/how-to-run-simulations.html) guide in the documentation for advice on how to optimize your simulations.
 
 ## Updates
-The notebook that is available in this repository is no longer working with the new version of Flower. Please, use the codes into the folder hh_fl with the updated implementation according to new version of Flower.
+The notebook FederatedLossyCounting.ipynb that is available in this repository is no longer working with the new version of Flower. Please, use the codes into the folder hh_fl with the updated implementation according to new version of Flower.
