@@ -27,6 +27,7 @@ The correct BibTeX citations for both are provided below.
 ### 📌 Citations
 
 Paper: Federated Online Learning for Heavy Hitter Detection
+```bibtex
 @article{federatedHeavyHitter,
   author    = {Authors of the paper},
   title     = {Federated Online Learning for Heavy Hitter Detection},
@@ -37,8 +38,10 @@ Paper: Federated Online Learning for Heavy Hitter Detection
   pages     = {Pages},
   doi       = {DOI of the paper}
 }
+```
 
 Dataset: Anonymised Phone Call Dataset for Anomaly Detection
+```bibtex
 @misc{bruno2024anonymised,
   author    = {Bruno, V. and Carlos, M. and Raphael, E. and Paula Raissa, S. and Raul, A. and João, G.},
   title     = {Anonymised Phone Call Dataset for Anomaly Detection},
@@ -48,6 +51,7 @@ Dataset: Anonymised Phone Call Dataset for Anomaly Detection
   url       = {https://doi.org/10.5281/zenodo.13254389},
   note      = {Data set}
 }
+```
 
 ## **Configuration Parameters**  
 
